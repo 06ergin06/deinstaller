@@ -51,23 +51,23 @@ if (( de >= 1 && de <= 5 )); then
              fi
             echo "downloanding and installing..."
             sleep 1
-            sudo apt install -y "$PACKAGE"
+            sudo apt install "$PACKAGE"
             ;;
         "dnf") 
             if(( de == "1" )); then 
-                PACKAGE="@plasma-desktop"
+                PACKAGE="plasma-desktop"
             elif(( de == "2" )); then 
-                PACKAGE="@gnome-desktop"
+                PACKAGE="gnome-desktop"
             elif(( de == "3" )); then 
-                PACKAGE="@xfce4-desktop"
+                PACKAGE="xfce-desktop"
             elif(( de == "4" )); then 
-                PACKAGE="@mate-desktop" 
+                PACKAGE="mate-desktop" 
             elif(( de == "5" )); then
-                PACKAGE="@cinnamon-desktop"
+                PACKAGE="cinnamon-desktop"
             fi 
             echo "downloanding and installing..."
             sleep 1
-            sudo dnf group install -y "$PACKAGE"
+            sudo dnf group install "$PACKAGE"
             ;;
 
         "yum") 
@@ -76,7 +76,7 @@ if (( de >= 1 && de <= 5 )); then
             elif(( de == "2" )); then 
                 PACKAGE="gnome-desktop"
             elif(( de == "3" )); then 
-                PACKAGE="xfce4-desktop"
+                PACKAGE="xfce-desktop"
             elif(( de == "4" )); then 
                 PACKAGE="mate-desktop" 
             elif(( de == "5" )); then
@@ -84,7 +84,7 @@ if (( de >= 1 && de <= 5 )); then
             fi 
             echo "downloanding and installing..."
             sleep 1
-            sudo yum group install -y "$PACKAGE"
+            sudo yum group install "$PACKAGE"
             ;;
 
         "pacman") 
@@ -101,7 +101,7 @@ if (( de >= 1 && de <= 5 )); then
             fi 
             echo "downloanding and installing..."
             sleep 1
-            sudo pacman -Syu --noconfirm "$PACKAGE"
+            sudo pacman -Syu "$PACKAGE"
             ;;
 
         "zypper")
@@ -117,7 +117,7 @@ if (( de >= 1 && de <= 5 )); then
                 PACKAGE="cinnamon"
             fi
             echo "downloanding and installing..."
-            sudo zypper install -y "$PACKAGE"
+            sudo zypper install "$PACKAGE"
             ;;
 
     esac
