@@ -51,7 +51,7 @@ if (( de >= 1 && de <= 5 )); then
              fi
             echo "downloanding and installing..."
             sleep 1
-            sudo apt install "$PACKAGE"
+            sudo apt install -y "$PACKAGE"
             ;;
         "dnf") 
             if(( de == "1" )); then 
@@ -67,7 +67,7 @@ if (( de >= 1 && de <= 5 )); then
             fi 
             echo "downloanding and installing..."
             sleep 1
-            sudo dnf group install "$PACKAGE"
+            sudo dnf group install -y "$PACKAGE"
             ;;
 
         "yum") 
@@ -84,7 +84,7 @@ if (( de >= 1 && de <= 5 )); then
             fi 
             echo "downloanding and installing..."
             sleep 1
-            sudo yum group install "$PACKAGE"
+            sudo yum group install -y "$PACKAGE"
             ;;
 
         "pacman") 
@@ -101,7 +101,7 @@ if (( de >= 1 && de <= 5 )); then
             fi 
             echo "downloanding and installing..."
             sleep 1
-            sudo pacman -Syu "$PACKAGE"
+            sudo pacman -Syu --no-confirm "$PACKAGE"
             ;;
 
         "zypper")
@@ -117,7 +117,7 @@ if (( de >= 1 && de <= 5 )); then
                 PACKAGE="cinnamon"
             fi
             echo "downloanding and installing..."
-            sudo zypper install "$PACKAGE"
+            sudo zypper install -y "$PACKAGE"
             ;;
 
     esac
