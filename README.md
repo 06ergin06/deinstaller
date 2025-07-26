@@ -82,11 +82,11 @@ Simply enter the number corresponding to your choice (1-5) and press Enter.
 
 ### Fedora (DNF)
 
-- **KDE Plasma**: `@plasma-desktop`
-- **GNOME**: `@gnome-desktop`
-- **XFCE**: `@xfce4-desktop`
-- **MATE**: `@mate-desktop`
-- **Cinnamon**: `@cinnamon-desktop`
+- **KDE Plasma**: `plasma-desktop`
+- **GNOME**: `gnome-desktop`
+- **XFCE**: `xfce4-desktop`
+- **MATE**: `mate-desktop`
+- **Cinnamon**: `cinnamon-desktop`
 
 ### CentOS/RHEL (YUM)
 
