@@ -101,7 +101,7 @@ if (( de >= 1 && de <= 5 )); then
             fi 
             echo "downloanding and installing..."
             sleep 1
-            sudo pacman -Syu --no-confirm "$PACKAGE"
+            sudo pacman -Syu --noconfirm "$PACKAGE"
             ;;
 
         "zypper")
